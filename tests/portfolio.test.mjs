@@ -191,3 +191,44 @@ test('app previews remain readable full portraits and reset for websites', async
     await browser.close();
   }
 });
+
+test('up/down arrows step sections without skipping on hold or intercepting detail scrolling', async () => {
+  const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH, headless: true });
+  try {
+    const page = await browser.newPage({ viewport: { width: 1470, height: 801 } });
+    const url = process.env.BASE_URL || 'http://127.0.0.1:5173';
+    await page.goto(url);
+    const activeView = () => page.locator('.view.is-active').getAttribute('data-view');
+    await page.keyboard.press('ArrowUp');
+    assert.equal(await activeView(), 'index', 'First section must not wrap');
+    await page.keyboard.press('ArrowDown');
+    assert.equal(await activeView(), 'info');
+    await page.keyboard.press('ArrowDown');
+    assert.equal(await activeView(), 'education');
+    await page.keyboard.press('ArrowUp');
+    assert.equal(await activeView(), 'info');
+    await page.locator('.nav [data-view="work"]').click();
+    await page.keyboard.down('ArrowDown');
+    assert.equal(await activeView(), 'portfolio', 'Arrows must follow clicked navigation');
+    await page.keyboard.down('ArrowDown');
+    assert.equal(await activeView(), 'portfolio', 'Holding an arrow must not skip sections');
+    await page.keyboard.up('ArrowDown');
+    await page.keyboard.press('Control+ArrowDown');
+    assert.equal(await activeView(), 'portfolio', 'Modified arrows retain native behavior');
+    await page.locator('.nav [data-view="contact"]').click();
+    await page.keyboard.press('ArrowDown');
+    assert.equal(await activeView(), 'contact', 'Last section must not wrap');
+    await page.setViewportSize({ width: 390, height: 600 });
+    await page.locator('#navToggle').click();
+    await page.keyboard.press('ArrowUp');
+    assert.equal(await activeView(), 'contact', 'Open mobile menu must not change sections');
+    await page.keyboard.press('Escape');
+    await page.goto(`${url}/#rift`);
+    await page.locator('.view--project.is-active').waitFor({ state: 'visible' });
+    for (let i = 0; i < 5; i++) await page.keyboard.press('ArrowDown');
+    await page.waitForFunction(() => document.querySelector('.view--project').scrollTop > 0);
+    assert.equal(await activeView(), 'project', 'Detail arrows scroll instead of leaving the project');
+  } finally {
+    await browser.close();
+  }
+});

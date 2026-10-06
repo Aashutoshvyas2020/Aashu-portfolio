@@ -248,6 +248,13 @@ document.addEventListener('click', event => {
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && siteNav.classList.contains('is-open')) closeMenu(true);
   else if (event.key === 'Escape' && currentView() === 'project') closeProject();
+  else if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+    if (event.defaultPrevented || event.ctrlKey || event.altKey || event.metaKey || event.shiftKey
+        || event.target.isContentEditable || event.target.closest?.('input, textarea, select')
+        || currentView() === 'project' || siteNav.classList.contains('is-open')) return;
+    event.preventDefault();
+    if (!event.repeat) step(event.key === 'ArrowDown' ? 1 : -1);
+  }
 });
 
 closeMenu();

@@ -44,7 +44,7 @@ tests/
 Edit content in `public/index.html`. Detail links use matching article `data-project` values; `data-section` identifies the section to return to. Project preview images use `data-preview`; add `data-preview-format="portrait"` for a tall, uncropped app screenshot with an iPhone-style bezel. Landscape previews sit inside a CSS midnight MacBook frame. Device frames reuse the original images and require no additional assets.
 CSS and JavaScript URLs include content-hash versions. Update the matching `?v=` value in `index.html` when changing either file so existing browser tabs fetch the new asset.
 
-Main sections advance once per wheel burst, using 70ms of silence to identify a new gesture. Detail pages retain native scrolling. Photography and book details use uncropped images and responsive editorial layouts.
+Main sections advance once per wheel burst, using 70ms of silence to identify a new gesture. Up/down arrows move one section per press without wrapping at the ends; holding a key does not skip sections. Modified arrows, editable fields, open mobile menus, and detail pages retain native keyboard behavior. Detail pages retain native scrolling. Photography and book details use uncropped images and responsive editorial layouts.
 
 ## Deployment
 
