@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aashutosh Vyas</title>
+  <meta name="description" content="Aashutosh Vyas — Bay Area builder and photographer working across AI, software, research, and photography. Founder of Rift and Locora; AI implementation at SMEED CPA." />
+  <meta name="author" content="Aashutosh Vyas" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23fbfbf9'/%3E%3Ctext x='50' y='71' font-size='64' font-family='monospace' font-weight='700' fill='%23141414' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="brand">
+    <a href="#" class="brand__name" data-view="index">AASHUTOSH VYAS</a>
+    <span class="brand__role">BUILDER &amp; PHOTOGRAPHER</span>
+  </div>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNav">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="nav" id="siteNav" aria-label="Primary">
+    <a href="#" data-view="info">INFO</a>
+    <a href="#" data-view="education">EDUCATION</a>
+    <a href="#" data-view="work">WORK</a>
+    <a href="#" data-view="portfolio">SELECTED PROJECTS</a>
+    <a href="#" data-view="research">RESEARCH</a>
+    <a href="#" data-view="photography">PHOTOGRAPHY</a>
+    <a href="#" data-view="honors">HONORS</a>
+    <a href="#" data-view="currently">CURRENTLY</a>
+    <a href="#" data-view="contact">CONTACT</a>
+  </nav>
+
+  <main class="stage">
+    <section class="view view--index is-active" data-view="index" role="button" tabindex="0" aria-label="Continue to Info">
+      <div class="slideshow">
+        <img src="images/egret-in-time.jpg" alt="Egret in Time, an egret standing in water with its reflection" class="is-active" fetchpriority="high" decoding="async" />
+      </div>
+    </section>
+
+    <section class="view view--text" data-view="info">
+      <p class="info">I’m Aashutosh Vyas, a high school student in the Bay Area. Most of what I work on sits somewhere between AI, software, research, and photography.</p>
+      <p class="info">I’m currently building Rift, working on AI implementation at SMEED CPA, and developing a few other projects across AI and software.</p>
+      <p class="info">I’m usually most interested in problems where the solution is not already obvious.</p>
+      <a class="details-link" href="#about">Read more&nbsp;↗</a>
+    </section>
+
+    <section class="view view--text" data-view="education">
+      <ul class="entries">
+        <li><span class="entries__lead">Heritage High School</span><br />Brentwood, California<br />Class of 2028</li>
+        <li>Selected coursework includes: AP Calculus AB, AP Computer Science A, AP Physics 1, AP Networking, AP Business, AP English Language &amp; Composition</li>
+      </ul>
+    </section>
+
+    <section class="view view--text" data-view="work">
+      <ul class="entries">
+        <li><span class="entries__lead">SMEED CPA</span> — AI Implementation Analyst, 2026 to present. Turning useful AI into reliable production workflows.<a class="details-link" href="#smeed">Details&nbsp;↗</a></li>
+        <li><span class="entries__lead">Locora</span> — Founder, 2026 to present. Local information, product engineering, and formal partnerships with cities.<a class="details-link" href="#locora">Details&nbsp;↗</a></li>
+        <li><span class="entries__lead">Rift</span> — Founder, 2026 to present. Temporal models of human attention for short-form video.<a class="details-link" href="#rift-work">Details&nbsp;↗</a></li>
+      </ul>
+    </section>
+
+    <section class="view view--text view--portfolio" data-view="portfolio">
+      <div class="portfolio">
+        <div class="portfolio__col">
+          <ul class="entries is-active" data-page="1">
+            <li class="work" data-preview="images/rift-current.jpg" data-preview-alt="Current Rift website at tryrift.xyz"><a class="entries__lead" href="https://tryrift.xyz/" target="_blank" rel="noopener">Rift</a> — modeling how attention changes over time through video.<a class="details-link" href="#rift">Details&nbsp;↗</a></li>
+            <li class="work" data-preview="images/locora-app.jpg" data-preview-alt="Locora iOS app Discover screen"><span class="entries__lead">Locora</span> — local events, discovery, and useful city information.<a class="details-link" href="#locora-app">Details&nbsp;↗</a></li>
+            <li class="work" data-preview="images/emberline.jpg" data-preview-alt="Emberline iOS app satellite event map"><span class="entries__lead">Emberline</span> — wildfire situational awareness from satellite and official incident data.<a class="details-link" href="#emberline">Details&nbsp;↗</a></li>
+          </ul>
+          <ul class="entries" data-page="2">
+            <li class="work" data-preview="images/echoes-current.jpg" data-preview-alt="Echoes voice conversation website"><a class="entries__lead" href="https://echoes.aashutoshvyas.com/" target="_blank" rel="noopener">Echoes</a> — voice conversations through a simple call interface.<a class="details-link" href="#echoes">Details&nbsp;↗</a></li>
+            <li class="work" data-preview="images/duo-fold.jpg" data-preview-alt="Duo Fold live demo at YC Bitrig Hacks"><a class="entries__lead" href="https://github.com/Aashutoshvyas2020/human" target="_blank" rel="noopener">Duo Fold</a> — local-first human verification for iPhone Duo. Placed at YC Bitrig Hacks.<a class="details-link" href="#duo-fold">Details&nbsp;↗</a></li>
+            <li class="work" data-preview="images/atlas-interface.jpg" data-preview-alt="Atlas computer assistant interface in offline idle state"><a class="entries__lead" href="https://github.com/Aashutoshvyas2020/atlas" target="_blank" rel="noopener">Atlas</a> — hands-free computing for limited upper-limb mobility. Second place at Grizzly Hacks.<a class="details-link" href="#atlas">Details&nbsp;↗</a></li>
+          </ul>
+          <nav class="pagination" aria-label="Project pages">
+            <a href="#" class="pagination__link is-current" data-page="1" aria-current="page">1</a>
+            <a href="#" class="pagination__link" data-page="2">2</a>
+          </nav>
+        </div>
+        <div class="work-panel" aria-hidden="true">
+          <div class="work-panel__idle"><span class="work-panel__caret"></span><span class="work-panel__hint">hover a project to preview it</span></div>
+          <img class="work-panel__img" alt="" decoding="async" />
+          <img class="work-panel__img" alt="" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+    <section class="view view--text" data-view="research">
+      <ul class="entries">
+        <li><span class="entries__lead">Adaptive Search for LLM Creativity</span> — learning when to deepen an idea, explore something distant, or consolidate what has been found.</li>
+        <li>Studying useful, non-obvious connections and evaluating creativity through quality, diversity, and novelty.</li>
+      </ul>
+      <a class="details-link" href="#adaptive-search">Read more&nbsp;↗</a>
+    </section>
+
+    <section class="view view--text" data-view="photography">
+      <ul class="entries">
+        <li><span class="entries__lead">Photography</span> — since 2020. Landscapes, architecture, cities, and traces of people in places.<a class="details-link" href="#photography">Details&nbsp;↗</a></li>
+        <li><span class="entries__lead">After Passage</span> — places after people have moved through them, and what remains.<a class="details-link" href="#after-passage">Details&nbsp;↗</a></li>
+        <li><span class="entries__lead">What the Eye Returns To</span> — my first photography book; the images I kept returning to.<a class="details-link" href="#what-the-eye-returns-to">Details&nbsp;↗</a></li>
+      </ul>
+    </section>
+
+    <section class="view view--text" data-view="honors">
+      <ul class="entries">
+        <li><span class="entries__lead">Scholastic Art &amp; Writing Awards</span><br />Photography, 2026<br />Gold Key · Silver Key · 2x Honorable Mention<br /><a class="details-link" href="#scholastic">Details&nbsp;↗</a></li>
+        <li><span class="entries__lead">Hackathons</span> — projects across AI, accessibility, agent systems, computer vision, and human-computer interaction.<a class="details-link" href="#hackathons">Details&nbsp;↗</a></li>
+      </ul>
+    </section>
+
+    <section class="view view--text" data-view="currently">
+      <p class="info">Right now I’m focused mainly on Rift, my research into creative search in language models, applied AI work at SMEED, and continuing my photography.</p>
+      <p class="info">I'm driven by work that creates value not just for others but for myself.</p>
+    </section>
+
+    <section class="view view--text" data-view="contact">
+      <p class="info">If you want to talk about something I’m building, research, photography, or an idea you think I might find interesting, feel free to reach out.</p>
+      <ul class="contact">
+        <li><a href="https://www.linkedin.com/in/aashuvyas" target="_blank" rel="noopener">LINKEDIN</a></li>
+        <li><a href="https://github.com/Aashutoshvyas2020" target="_blank" rel="noopener">GITHUB</a></li>
+        <li><a href="https://aashutoshvyas.com/" target="_blank" rel="noopener">PHOTOGRAPHY</a></li>
+        <li><a href="mailto:aashutoshvyas2010@gmail.com">EMAIL</a></li>
+      </ul>
+    </section>
+
+    <section class="view view--text view--project" data-view="project">
+      <a href="#" class="project__back">← Back</a>
+
+      <article class="project" data-project="about" data-section="info" hidden>
+        <header class="project__head"><div class="project__intro"><h2 class="project__title">Info</h2></div></header>
+        <div class="project__body">
+          <p>I’m Aashutosh Vyas, a high school student in the Bay Area. Most of what I work on sits somewhere between AI, software, research, and photography.</p>
+          <p>A lot of my projects start with a question I think is worth testing. Recently that has included how models can search through ideas more creatively, how human attention changes over time, how agents should work with people when they reach something they cannot solve alone, and how AI can actually be useful inside real organizations instead of becoming another chatbot layered onto an existing process.</p>
+          <p>I’m currently building Rift, working on AI implementation at SMEED CPA, and developing a few other projects across AI and software.</p>
+          <p>Outside of that, I’ve been doing photography since 2020. I mainly photograph landscapes, cities, architecture, and places that I find visually interesting. My work has been recognized through the Scholastic Art &amp; Writing Awards, and I published my first photography book, <em>What the Eye Returns To</em>.</p>
+          <p>I’m usually most interested in problems where the solution is not already obvious.</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="smeed" data-section="work" hidden>
+        <header class="project__head"><div class="project__intro"><h2 class="project__title">SMEED CPA</h2><p class="project__tagline">AI Implementation Analyst<br />2026 to present</p></div></header>
+        <div class="project__body">
+          <p>I identify areas where AI can save time, remove repetitive work, or improve an existing process, then help design and implement the systems around them.</p>
+          <p>A large part is understanding how the existing workflow functions, deciding what should be automated, and building something reliable enough to become part of the production process.</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="locora" data-section="work" hidden>
+        <header class="project__head"><div class="project__intro"><h2 class="project__title">Locora</h2><p class="project__tagline">Founder<br />2026 to present</p></div></header>
+        <div class="project__body">
+          <p>Locora is a local information platform built around making useful city information easier to find.</p>
+          <p>I work across the product and engineering side, including the web platform, data systems, internal tools, infrastructure, and the technical work needed to support direct partnerships with cities.</p>
+          <p>We are currently working with multiple cities through formal partnerships.</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="rift-work" data-section="work" hidden>
+        <header class="project__head"><div class="project__intro"><h2 class="project__title">Rift</h2><p class="project__tagline">Founder<br />2026 to present</p><ul class="project__links"><li><a href="https://tryrift.xyz/" target="_blank" rel="noopener">Website</a></li></ul></div></header>
+        <div class="project__body">
+          <p>Rift started from a problem I saw in how attention is modeled.</p>
+          <p>Most systems analyzing video treat each moment mostly independently, but human attention has memory. What someone notices now is influenced by what they just saw.</p>
+          <p>I’m building models that use temporal context to better understand how attention changes through short-form video, with the larger goal of turning that understanding into useful tools for creators and content teams.</p>
+          <p>The research has involved gaze prediction, temporal modeling, cognitive event boundaries, and experiments around what actually changes or resets the memory guiding attention.</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="rift" data-section="portfolio" hidden>
+        <header class="project__head"><img class="project__media" src="images/rift-current.jpg" alt="Current Rift website at tryrift.xyz" decoding="async" loading="lazy" /><div class="project__intro"><h2 class="project__title">Rift</h2><ul class="project__links"><li><a href="https://tryrift.xyz/" target="_blank" rel="noopener">Website</a></li></ul></div></header>
+        <div class="project__body">
+          <p>Rift models how human attention changes over time while someone watches video.</p>
+          <p>The central idea is that attention should not be predicted frame by frame as if every moment exists independently. What someone notices now is affected by what they have already seen.</p>
+          <p>I’m building and testing models with temporal memory to capture that behavior more accurately and studying what kinds of events cause that memory to change.</p>
+          <img class="project__screenshot" src="images/rift-analysis.jpg" alt="Current Rift website scoring workflow: upload a creative, read the predicted response, and get the full readout" decoding="async" loading="lazy" />
+        </div>
+      </article>
+
+      <article class="project" data-project="locora-app" data-section="portfolio" hidden>
+        <header class="project__head"><img class="project__media project__media--portrait" src="images/locora-app.jpg" alt="Locora iOS app Discover screen" decoding="async" loading="lazy" /><div class="project__intro"><h2 class="project__title">Locora</h2><p class="project__tagline">Local events, discovery, and city information</p></div></header>
+        <div class="project__body">
+          <p>Locora is a local information platform built around making useful city information easier to find.</p>
+          <p>I work across the product and engineering side, including the web platform, mobile app, data systems, internal tools, infrastructure, and the technical work needed to support direct partnerships with cities.</p>
+          <p>We are currently working with multiple cities through formal partnerships.</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="emberline" data-section="portfolio" hidden>
+        <header class="project__head"><img class="project__media project__media--portrait" src="images/emberline.jpg" alt="Emberline iOS app satellite event map" decoding="async" loading="lazy" /><div class="project__intro"><h2 class="project__title">Emberline</h2><p class="project__tagline">Wildfire situational awareness</p></div></header>
+        <div class="project__body">
+          <p>Emberline turns satellite thermal observations into persistent, explainable possible-fire events. It filters known industrial heat, checks official incident data, and adds weather and air-quality context for places people care about.</p>
+          <p>The app distinguishes satellite hotspots from confirmed fires. It is an informational tool, not an evacuation forecast or replacement for official emergency alerts.</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="atlas" data-section="portfolio" hidden>
+        <header class="project__head"><img class="project__media" src="images/atlas-interface.jpg" alt="Atlas computer assistant interface in offline idle state" decoding="async" loading="lazy" /><div class="project__intro"><h2 class="project__title">Atlas</h2><p class="project__tagline">Second place · Grizzly Hacks</p><ul class="project__links"><li><a href="https://github.com/Aashutoshvyas2020/atlas" target="_blank" rel="noopener">GitHub</a></li></ul></div></header>
+        <div class="project__body">
+          <p>Atlas is a hands-free computing system designed around people with limited upper-limb mobility.</p>
+          <p>The project explores how computer vision and alternative inputs can be combined to create a usable way to control a computer without depending on a traditional keyboard and mouse.</p>
+          <p>Atlas placed second at Grizzly Hacks. The screenshot shows the actual computer-assistant interface in its offline idle state.</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="echoes" data-section="portfolio" hidden>
+        <header class="project__head"><img class="project__media" src="images/echoes-current.jpg" alt="Echoes voice conversation website" decoding="async" loading="lazy" /><div class="project__intro"><h2 class="project__title">Echoes</h2><ul class="project__links"><li><a href="https://echoes.aashutoshvyas.com/" target="_blank" rel="noopener">Website</a></li><li><a href="https://github.com/Aashutoshvyas2020/Echoes-backend" target="_blank" rel="noopener">GitHub</a></li></ul></div></header>
+        <div class="project__body">
+          <p>Echoes is a voice conversation project with a simple web interface for starting a call.</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="duo-fold" data-section="portfolio" hidden>
+        <header class="project__head"><img class="project__media" src="images/duo-fold.jpg" alt="Duo Fold live demo at YC Bitrig Hacks" decoding="async" loading="lazy" /><div class="project__intro"><h2 class="project__title">Duo Fold</h2><p class="project__tagline">Placed at YC Bitrig Hacks</p><ul class="project__links"><li><a href="https://github.com/Aashutoshvyas2020/human" target="_blank" rel="noopener">GitHub</a></li></ul></div></header>
+        <div class="project__body">
+          <p>Duo Fold explores local-first human verification for iPhone Duo. The native app asks a person to match three hinge angles, then returns the result to a small web interface.</p>
+          <p>We placed at YC Bitrig Hacks. The image is a frame from our live demo there.</p>
+          <p>This is an experimental prototype, not a secure CAPTCHA service for protecting accounts or payments.</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="adaptive-search" data-section="research" hidden>
+        <header class="project__head"><div class="project__intro"><h2 class="project__title">Adaptive Search for LLM Creativity</h2></div></header>
+        <div class="project__body">
+          <p>I’m working on a research question around whether an LLM can make better creative decisions by changing how it searches through ideas.</p>
+          <p>When a model is solving a creative task, there are different useful directions it can take. It can deepen the current idea, explore something much more distant, or consolidate ideas it has already found.</p>
+          <p>My approach is to represent those as explicit actions and study whether a small controller can learn when each one is most useful.</p>
+          <p>I’m especially interested in whether useful, non-obvious connections can be searched for systematically instead of being treated as something that only appears by chance.</p>
+          <p>A major part of the research is also defining how creativity should actually be evaluated. Novelty alone is not enough if the resulting idea is not useful, so the work looks at creativity through quality, diversity, and novelty rather than collapsing everything into one score.</p>
+        </div>
+      </article>
+
+      <article class="project project--editorial" data-project="photography" data-section="photography" hidden>
+        <header class="project__head"><img class="project__media" src="images/point-of-arrival-p9.jpg" alt="Misty Meadow, Yosemite, California, by Aashutosh Vyas" decoding="async" loading="lazy" /><div class="project__intro"><h2 class="project__title">Photography</h2><ul class="project__links"><li><a href="https://aashutoshvyas.com/point-of-arrival?photo=p9" target="_blank" rel="noopener">View photograph</a></li><li><a href="https://aashutoshvyas.com/" target="_blank" rel="noopener">Portfolio</a></li></ul></div></header>
+        <div class="project__body">
+          <p>I started photography in 2020.</p>
+          <p>I originally got into it because I liked finding compositions and places that looked different through a camera than they did normally. Over time I became much more interested in how a photograph controls attention, what gets emphasized, and what gets left outside the frame.</p>
+          <p>A lot of my work focuses on landscapes, architecture, cities, and traces of people in places.</p>
+          <p>My photography has received a Gold Key, Silver Key, and two Honorable Mentions through the Scholastic Art &amp; Writing Awards.</p>
+          <p>I also published my first photography book, <em>What the Eye Returns To</em>.</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="after-passage" data-section="photography" hidden>
+        <header class="project__head"><div class="project__intro"><h2 class="project__title">After Passage</h2></div></header>
+        <div class="project__body">
+          <p>After Passage is a photography project centered around places after people have moved through them.</p>
+          <p>The photographs focus less on people themselves and more on what remains: structures, roads, objects, landscapes, and small signs of previous human presence.</p>
+          <p>The project is about what a place can communicate even when the people who shaped it are no longer visible.</p>
+        </div>
+      </article>
+
+      <article class="project project--editorial" data-project="what-the-eye-returns-to" data-section="photography" hidden>
+        <header class="project__head"><img class="project__media" src="images/what-the-eye-returns-to.jpg" alt="What the Eye Returns To by Aashutosh Vyas" decoding="async" loading="lazy" /><div class="project__intro"><h2 class="project__title">What the Eye Returns To</h2><ul class="project__links"><li><a href="https://aashutoshvyas.com/" target="_blank" rel="noopener">Photography</a></li><li><a href="https://www.amazon.com/dp/B0H8ZVZRJZ" target="_blank" rel="noopener">Book</a></li></ul></div></header>
+        <div class="project__body">
+          <p><em>What the Eye Returns To</em> is my first photography book.</p>
+          <p>The book brings together photographs I made across different places and periods rather than documenting one single location.</p>
+          <p>The title came from something I noticed while editing my work. Some photographs are impressive immediately, but others are the ones I kept returning to.</p>
+          <p>I became more interested in those images and in understanding why certain scenes continue to hold attention after the first look.</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="scholastic" data-section="honors" hidden>
+        <header class="project__head"><div class="project__intro"><h2 class="project__title">Scholastic Art &amp; Writing Awards</h2><p class="project__tagline">Photography, 2026</p></div></header>
+        <div class="project__body">
+          <ul class="entries"><li>Gold Key</li><li>Silver Key</li><li>2x Honorable Mention</li></ul>
+          <p>Recognized through the California Bay Area regional Scholastic Art &amp; Writing Awards for photography.</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="hackathons" data-section="honors" hidden>
+        <header class="project__head"><div class="project__intro"><h2 class="project__title">Hackathons</h2></div></header>
+        <div class="project__body">
+          <p>I’ve built projects at hackathons across AI, accessibility, agent systems, computer vision, and human-computer interaction.</p>
+          <p>The individual projects include their specific event and placement where applicable.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
