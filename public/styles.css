@@ -222,19 +222,61 @@ a { color: inherit; text-decoration: none; }
   flex: 0 0 auto;
   position: relative;
   width: min(500px, 46vw);
-  aspect-ratio: 19 / 10;
-  border-radius: 12px;
+  margin: 0 30px 14px 0;
+  padding: 10px 10px 16px;
+  border-radius: 14px 14px 7px 7px;
+  border: 1px solid #435165;
+  background: linear-gradient(135deg, #263449, #111b29 65%, #263449);
+  box-shadow: 0 14px 32px rgba(15, 25, 40, 0.16);
+}
+.work-panel::after {
+  content: "";
+  position: absolute;
+  left: -6%;
+  bottom: -10px;
+  width: 112%;
+  height: 12px;
+  border: 1px solid #435165;
+  border-radius: 2px 2px 12px 12px;
+  background: linear-gradient(#435165, #263449 40%, #152031);
+  box-shadow: 0 10px 16px rgba(15, 25, 40, 0.12);
+}
+.work-panel::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 40%;
+  bottom: -4px;
+  width: 20%;
+  height: 4px;
+  border-radius: 0 0 5px 5px;
+  background: #101a28;
+}
+.work-panel__screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
-  border: 1px solid rgba(20, 20, 20, 0.1);
-  background: #f1f1ec;
-  box-shadow: 0 14px 44px rgba(20, 20, 20, 0.12);
+  border-radius: 5px;
+  background: #07090d;
 }
 .work-panel.is-portrait {
   height: min(480px, calc(100dvh - 220px));
   aspect-ratio: auto;
+  margin: 0;
+  padding: 0;
   border: 0;
   background: transparent;
   box-shadow: none;
+}
+.work-panel.is-portrait::before,
+.work-panel.is-portrait::after { display: none; }
+.work-panel.is-portrait .work-panel__screen {
+  height: 100%;
+  aspect-ratio: auto;
+  overflow: visible;
+  border-radius: 0;
+  background: transparent;
 }
 .work-panel__img {
   position: absolute;
@@ -253,7 +295,10 @@ a { color: inherit; text-decoration: none; }
   width: auto;
   max-width: 100%;
   transform: translateX(-50%);
-  border-radius: 16px;
+  border: 4px solid #161b23;
+  border-radius: 23px;
+  outline: 1px solid #78818e;
+  box-shadow: 0 12px 28px rgba(15, 25, 40, 0.16), 0 0 0 2px #273140;
 }
 
 /* Idle state — shown until a project is hovered */
@@ -420,6 +465,14 @@ a { color: inherit; text-decoration: none; }
   background: #f1f1ec;
 }
 .project__media--portrait { width: min(240px, 40%); aspect-ratio: auto; }
+.project__media.project__media--portrait {
+  border-color: #161b23;
+  margin-left: 4px;
+  margin-top: 4px;
+  border-radius: 23px;
+  outline: 1px solid #78818e;
+  box-shadow: 0 0 0 3px #161b23, 0 12px 28px rgba(15, 25, 40, 0.12);
+}
 .project__screenshot { display: block; width: 100%; height: auto; margin-top: 24px; border-radius: 10px; }
 
 /* Photography and book details preserve the full image beside readable copy. */
