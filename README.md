@@ -41,7 +41,7 @@ tests/
   portfolio.test.mjs
 ```
 
-Edit content in `public/index.html`. Detail links use matching article `data-project` values; `data-section` identifies the section to return to. Project preview images use `data-preview`.
+Edit content in `public/index.html`. Detail links use matching article `data-project` values; `data-section` identifies the section to return to. Project preview images use `data-preview`; add `data-preview-format="portrait"` for a tall, uncropped app screenshot rather than a landscape thumbnail.
 
 Main sections advance once per wheel burst, using 70ms of silence to identify a new gesture. Detail pages retain native scrolling. Photography and book details use uncropped images and responsive editorial layouts.
 

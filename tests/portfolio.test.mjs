@@ -171,3 +171,23 @@ test('each scroll gesture moves exactly one page regardless of magnitude or dire
     await browser.close();
   }
 });
+
+test('app previews remain readable full portraits and reset for websites', async () => {
+  const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH, headless: true });
+  try {
+    const page = await browser.newPage({ viewport: { width: 1470, height: 801 } });
+    await page.goto(process.env.BASE_URL || 'http://127.0.0.1:5173');
+    await page.locator('.nav [data-view="portfolio"]').click();
+    for (const id of ['locora-app', 'emberline', 'rift']) {
+      await page.locator(`.work:has(.details-link[href="#${id}"])`).hover();
+      const image = page.locator('.work-panel__img.is-shown');
+      await image.evaluate(image => image.decode());
+      const height = await image.evaluate(image =>
+        Math.min(image.clientHeight, image.clientWidth * image.naturalHeight / image.naturalWidth));
+      if (id === 'rift') assert.ok(height < 801 / 2, 'Website preview must return to landscape size');
+      else assert.ok(height >= 801 / 2, `${id}: full app screen must be large enough to read, not a tiny landscape thumbnail`);
+    }
+  } finally {
+    await browser.close();
+  }
+});

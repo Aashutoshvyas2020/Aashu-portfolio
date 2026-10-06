@@ -92,6 +92,7 @@ if (portfolio) {
     const preview = work => {
       if (!work.dataset.preview) return;
       panel.classList.add('is-visible');
+      panel.classList.toggle('is-portrait', work.dataset.previewFormat === 'portrait');
       const current = layers[active];
       if (current.getAttribute('src') === work.dataset.preview) return;
       const next = layers[active ^ 1];
