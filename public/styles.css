@@ -230,7 +230,7 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 14px 44px rgba(20, 20, 20, 0.12);
 }
 .work-panel.is-portrait {
-  height: min(520px, calc(100dvh - 220px));
+  height: min(480px, calc(100dvh - 220px));
   aspect-ratio: auto;
   border: 0;
   background: transparent;
@@ -247,6 +247,14 @@ a { color: inherit; text-decoration: none; }
   transition: opacity .45s ease;
 }
 .work-panel__img.is-shown { opacity: 1; }
+.work-panel.is-portrait .work-panel__img {
+  left: 50%;
+  right: auto;
+  width: auto;
+  max-width: 100%;
+  transform: translateX(-50%);
+  border-radius: 16px;
+}
 
 /* Idle state — shown until a project is hovered */
 .work-panel__idle {
