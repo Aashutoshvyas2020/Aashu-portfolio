@@ -42,6 +42,7 @@ tests/
 ```
 
 Edit content in `public/index.html`. Detail links use matching article `data-project` values; `data-section` identifies the section to return to. Project preview images use `data-preview`; add `data-preview-format="portrait"` for a tall, uncropped app screenshot rather than a landscape thumbnail.
+CSS and JavaScript URLs include content-hash versions. Update the matching `?v=` value in `index.html` when changing either file so existing browser tabs fetch the new asset.
 
 Main sections advance once per wheel burst, using 70ms of silence to identify a new gesture. Detail pages retain native scrolling. Photography and book details use uncropped images and responsive editorial layouts.
 
