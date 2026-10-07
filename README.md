@@ -50,6 +50,15 @@ Main sections advance once per wheel burst, using 70ms of silence to identify a 
 
 Publish the contents of `public/` on any static host. There is no build command. Keep the relative image, font, stylesheet, and script paths intact.
 
+Production: [aashu.xyz](https://aashu.xyz), on the existing Netlify site `aashu-portfolio-274`. Deploy from the repository root with an authenticated Netlify CLI:
+
+```sh
+netlify deploy --site 3dd855ad-e5aa-45bc-bdc6-3668761f8694 --dir public --no-build --prod
+BASE_URL=https://aashu.xyz npm test
+```
+
+Production deployment is manual; pushing GitHub alone does not publish the site. Netlify retains previous deploys for rollback.
+
 ## Media and rights
 
 Photography and book artwork are by Aashutosh Vyas. Project captures show the actual sites or apps; Duo Fold uses a frame from its YC Bitrig Hacks demo, and Atlas shows its offline interface. Misty Meadow comes from the [Point of Arrival collection](https://aashutoshvyas.com/point-of-arrival?photo=p9).
