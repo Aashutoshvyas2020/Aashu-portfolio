@@ -61,6 +61,6 @@ Production deployment is manual; pushing GitHub alone does not publish the site.
 
 ## Media and rights
 
-Photography and book artwork are by Aashutosh Vyas. Project captures show the actual sites or apps; Duo Fold uses a frame from its YC Bitrig Hacks demo, and Atlas shows its offline interface. Misty Meadow comes from the [Point of Arrival collection](https://aashutoshvyas.com/point-of-arrival?photo=p9).
+Photography and book artwork are by Aashutosh Vyas. Project captures show the actual sites or apps; Duo Fold uses a frame from its YC Bitrig Hacks demo, Atlas shows its offline interface, and Starline uses the supplied screenshot of its live sign-in screen. Misty Meadow comes from the [Point of Arrival collection](https://aashutoshvyas.com/point-of-arrival?photo=p9).
 
 JetBrains Mono is distributed under the [SIL Open Font License](public/fonts/OFL.txt). Public repository access does not grant a separate license to reuse photographs, artwork, or other portfolio content.
